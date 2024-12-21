@@ -1,0 +1,42 @@
+﻿@model ChatRoomViewModel
+@{
+    ViewData["Title"] = $"Chat Room - {Model.RoomName}";
+}
+
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <!-- 채팅 영역 -->
+        <div class="col-md-9 h-100">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5 class="card-title">@Model.RoomName</h5>
+                </div>
+                <div class="card-body" style="height: calc(100% - 140px); overflow-y: auto;">
+                    <div id="messageList" class="list-unstyled">
+                        <!-- 메시지가 여기에 동적으로 추가됨 -->
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="input-group">
+                        <input type="text" id="messageInput" class="form-control" placeholder="Type a message...">
+                        <button class="btn btn-primary" id="sendMessage">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 멤버 리스트 -->
+        <div class="col-md-3 h-100">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5 class="card-title">Members</h5>
+                </div>
+                <div class="card-body">
+                    <div id="memberList" class="list-group">
+                        <!-- 멤버 목록이 여기에 동적으로 추가됨 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

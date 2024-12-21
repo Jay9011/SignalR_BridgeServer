@@ -1,0 +1,6 @@
+@SignalRBridgeServer_HostAddress = http://localhost:5167
+
+GET {{SignalRBridgeServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

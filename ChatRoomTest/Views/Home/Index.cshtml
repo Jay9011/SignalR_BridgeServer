@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Chat Lobby";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- 채팅방 목록 -->
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Chat Rooms</h5>
+                </div>
+                <div class="card-body">
+                    <div id="roomList" class="list-group">
+                        <!-- 채팅방 목록이 여기에 동적으로 추가됨 -->
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="input-group">
+                        <input type="text" id="newRoomName" class="form-control" placeholder="New room name...">
+                        <button class="btn btn-primary" id="createRoom">Create Room</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 사용자 프로필 -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Profile</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <h6 class="mb-0 me-2">Your Name:</h6>
+                        <span id="userName" class="cursor-pointer" data-bs-toggle="tooltip" title="Click to change">Anonymous</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <h6 class="mb-0 me-2">Status:</h6>
+                        <span id="connectionStatus">Disconnected</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 이름 변경 모달 -->
+<div class="modal fade" id="changeNameModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Change Name</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="newUserName" class="form-control" placeholder="Enter new name">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="saveName">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
